@@ -25,6 +25,7 @@ type User {
   type Query {
     getAllUsers: [User]!
     getUserById(userId: ID!): User
+  
     getAllAuctionItems: [AuctionItem]!
     getAuctionItemById(auctionItemId: ID!): AuctionItem
   }
@@ -42,7 +43,6 @@ type User {
       auctionEndDate: String!
     ): AuctionItem
     placeBid(auctionItemId: ID!, bidderId: ID!, amount: Float!): AuctionItem
-    # Other mutations for auction-related operations
   }
   `;
 module.exports = typeDefs;
