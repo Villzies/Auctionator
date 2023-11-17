@@ -22,10 +22,18 @@ type User {
     winner: User
   }
   
+  type Checkout {
+    session: ID
+  }
+
+  type Auth {
+    token: ID
+    user: User
+  }
+  
   type Query {
     getAllUsers: [User]!
     getUserById(userId: ID!): User
-  
     getAllAuctionItems: [AuctionItem]!
     getAuctionItemById(auctionItemId: ID!): AuctionItem
   }
@@ -33,7 +41,7 @@ type User {
   type Mutation {
     addUser(username: String!, email: String!, password: String!): User
     updateUser(userId: ID!, username: String, email: String, password: String): User
-    deleteUser(userId: ID!): User
+    login(email: String!, password: String!): Auth
   
     addAuctionItem(
       name: String!

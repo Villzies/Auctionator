@@ -2,11 +2,6 @@ const mongoose = require("mongoose");
 const { Schema } = mongoose;
 
 const bidHistorySchema = new Schema({
-  auctionItemId: {
-    type: Schema.Types.ObjectId,
-    ref: "AuctionItem",
-    required: true,
-  },
   bidder: {
     type: Schema.Types.ObjectId,
     ref: "User",
@@ -19,6 +14,10 @@ const bidHistorySchema = new Schema({
   timestamp: {
     type: Date,
     default: Date.now,
+  },
+  auctionItemId: {
+    type: Schema.Types.ObjectId,
+    ref: "AuctionItem",
   },
 });
 

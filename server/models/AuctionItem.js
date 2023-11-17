@@ -2,6 +2,7 @@ const mongoose = require("mongoose");
 const { Schema } = mongoose;
 
 const auctionItemSchema = new Schema({
+  _id: Schema.Types.ObjectId,
   name: {
     type: String,
     required: true,
