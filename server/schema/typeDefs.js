@@ -50,6 +50,7 @@ type User {
       imageURL: String!
       auctionEndDate: String!
     ): AuctionItem
+    updateBid(bidId: ID!, newAmount: Float!): BidHistory
     placeBid(auctionItemId: ID!, bidderId: ID!, amount: Float!): AuctionItem
   }
   `;

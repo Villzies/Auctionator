@@ -55,6 +55,19 @@ const resolvers = {
       });
       return auctionItem;
     },
+    updateBid: async (_, { bidId, newAmount }) => {
+      try {
+        const updatedBid = await Bid.findByIdAndUpdate(
+          bidId,
+          { amount: newAmount },
+          { new: true }
+        );
+        return updatedBid;
+      } catch (error) {
+        console.error("Error updating bid:", error);
+        throw new Error("Failed to update bid.");
+      }
+    },
     placeBid: async (parent, { auctionItemId, bidderId, amount }) => {
       try {
         const bidder = await User.findById(bidderId);
