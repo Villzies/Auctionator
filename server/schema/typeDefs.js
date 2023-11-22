@@ -1,9 +1,10 @@
 const typeDefs = `
 type User {
-    _id: ID!
-    username: String!
-    email: String!
-  }
+  _id: ID
+  firstName: String
+  lastName: String
+  email: String
+}
   
   type BidHistory {
     bidder: User!

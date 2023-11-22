@@ -1,11 +1,15 @@
+import React from 'react';
+import AuctionItem from '../components/AuctionItem'; 
+
 const Home = () => {
-    return (
-      <div className="container">
-        <Placeholder />
-        <Placeholder />
-        <Placeholder />
+  return (
+    <div>
+      <h2>Welcome to Auctionator!</h2>
+      <div className="auction-item-container">
+        <AuctionItem />
       </div>
-    );
-  };
-  
-  export default Home;
+    </div>
+  );
+};
+
+export default Home;

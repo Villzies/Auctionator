@@ -14,7 +14,20 @@ const resolvers = {
       return await AuctionItem.find();
     },
     getAuctionItemById: async (parent, { auctionItemId }) => {
-      return await AuctionItem.findById(auctionItemId);
+      try {
+        const auctionItem = await AuctionItem.findById(auctionItemId);
+        if (!auctionItem) {
+          throw new Error("Auction item not found");
+        }
+        const bidHistory = await BidHistory.find({ auctionItemId });
+        return {
+          ...auctionItem.toObject(),
+          bidHistory: bidHistory.map((bid) => bid.toObject()),
+        };
+      } catch (error) {
+        console.error("Error fetching auction item:", error.message);
+        throw new Error("Failed to fetch auction item");
+      }
     },
   },
   Mutation: {
