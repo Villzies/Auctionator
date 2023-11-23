@@ -1,21 +1,27 @@
 import { gql } from "@apollo/client";
 
 export const QUERY_AUCTION_ITEMS = gql`
-  query GetAllAuctionItems {
+  query Query {
     getAllAuctionItems {
       _id
-      name
-      description
-      startingPrice
-      imageURL
       auctionEndDate
       bidHistory {
+        amount
         bidder {
           _id
-          username
+          firstName
+          lastName
         }
-        amount
         timestamp
+      }
+      description
+      imageURL
+      name
+      startingPrice
+      winner {
+        _id
+        firstName
+        lastName
       }
     }
   }

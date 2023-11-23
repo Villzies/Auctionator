@@ -6,11 +6,6 @@ type User {
   email: String
 }
   
-  type BidHistory {
-    bidder: User!
-    amount: Float!
-    timestamp: String!
-  }
   
   type AuctionItem {
     _id: ID!
@@ -18,9 +13,21 @@ type User {
     description: String!
     startingPrice: Float!
     imageURL: String!
-    bidHistory: [BidHistory]!
+    bidHistory: [BidHistory]
     auctionEndDate: String!
     winner: User
+  }
+
+type BidHistory {
+  bidder: User
+  amount: Float!
+  timestamp: String!
+}
+
+  input BidHistoryInput {
+    bidder: ID!
+    amount: Float!
+    timestamp: String!
   }
   
   type Checkout {
@@ -44,15 +51,17 @@ type User {
     updateUser(userId: ID!, username: String, email: String, password: String): User
     login(email: String!, password: String!): Auth
   
-    addAuctionItem(
-      name: String!
-      description: String!
-      startingPrice: Float!
-      imageURL: String!
-      auctionEndDate: String!
-    ): AuctionItem
-    updateBid(bidId: ID!, newAmount: Float!): BidHistory
-    placeBid(auctionItemId: ID!, bidderId: ID!, amount: Float!): AuctionItem
+
   }
   `;
 module.exports = typeDefs;
+
+// addAuctionItem(
+//   name: String!
+//   description: String!
+//   startingPrice: Float!
+//   imageURL: String!
+//   auctionEndDate: String!
+// ): AuctionItem
+// updateBid(bidId: ID!, newAmount: Float!): BidHistory
+// placeBid(auctionItemId: ID!, bidderId: ID!, amount: Float!): AuctionItem
