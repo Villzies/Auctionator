@@ -47,7 +47,7 @@ type BidHistory {
   }
   
   type Mutation {
-    addUser(username: String!, email: String!, password: String!): User
+    addUser(firstName: String!, lastName: String!, email: String!, password: String!): User
     updateUser(userId: ID!, username: String, email: String, password: String): User
     login(email: String!, password: String!): Auth
   
