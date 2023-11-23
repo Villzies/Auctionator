@@ -31,17 +31,20 @@ function Signup(props) {
     };
   
     return (
-      <div className="container my-1">
-        <Link to="/login">← Login Instead</Link>
-  
-        <h2>Signup</h2>
+      <div className="container my-1" style={{ maxWidth: "400px", margin: "auto" }}>
+        <Link to="/login" style={{ textDecoration: "none", color: "#387a4a" }}>
+          ← Login Instead
+        </Link>
+
+        <h2 style={{ textAlign: "center", marginBottom: "20px" }}>Signup</h2>
         <form onSubmit={handleFormSubmit}>
           <div className="flex-row space-between my-2">
             <label htmlFor="firstName">First Name:</label>
             <input
+              style={{ width: "100%", padding: "8px", boxSizing: "border-box" }}
               placeholder="First"
               name="firstName"
-              type="firstName"
+              type="text"
               id="firstName"
               onChange={handleChange}
             />
@@ -49,9 +52,10 @@ function Signup(props) {
           <div className="flex-row space-between my-2">
             <label htmlFor="lastName">Last Name:</label>
             <input
+              style={{ width: "100%", padding: "8px", boxSizing: "border-box" }}
               placeholder="Last"
               name="lastName"
-              type="lastName"
+              type="text"
               id="lastName"
               onChange={handleChange}
             />
@@ -59,6 +63,7 @@ function Signup(props) {
           <div className="flex-row space-between my-2">
             <label htmlFor="email">Email:</label>
             <input
+              style={{ width: "100%", padding: "8px", boxSizing: "border-box" }}
               placeholder="youremail@test.com"
               name="email"
               type="email"
@@ -69,7 +74,8 @@ function Signup(props) {
           <div className="flex-row space-between my-2">
             <label htmlFor="pwd">Password:</label>
             <input
-              placeholder="******"
+              style={{ width: "100%", padding: "8px", boxSizing: "border-box" }}
+              placeholder="**"
               name="password"
               type="password"
               id="pwd"
@@ -77,7 +83,19 @@ function Signup(props) {
             />
           </div>
           <div className="flex-row flex-end">
-            <button type="submit">Submit</button>
+            <button
+              type="submit"
+              style={{
+                backgroundColor: "#387a4a",
+                color: "white",
+                padding: "10px 20px",
+                border: "none",
+                cursor: "pointer",
+                margin: "10px 150px",
+              }}
+            >
+              Submit
+            </button>
           </div>
         </form>
       </div>

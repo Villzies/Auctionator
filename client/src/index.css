@@ -5,7 +5,7 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  background-color: #303030;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -16,19 +16,26 @@
 
 a {
   font-weight: 500;
-  color: #646cff;
+  color: #51b16b;
   text-decoration: inherit;
 }
 a:hover {
-  color: #535bf2;
+  color: #428f56;
+  transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
 }
 
 body {
   margin: 0;
   display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  justify-content: center;
+  min-width: 100vw; 
+}
+
+
+.container {
+  background: #181818;
+  padding: 20px;
+  border-radius: 2%;
 }
 
 h1 {
