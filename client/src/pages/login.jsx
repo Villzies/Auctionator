@@ -31,14 +31,17 @@ function Login(props) {
   };
 
   return (
-    <div className="container my-1">
-      <Link to="/signup">← Go to Signup</Link>
+    <div className="container my-1" style={{ maxWidth: "400px", margin: "auto" }}>
+      <Link to="/signup" style={{ textDecoration: "none", color: "#387a4a" }}>
+        ← Go to Signup
+      </Link>
 
-      <h2>Login</h2>
+      <h2 style={{ textAlign: "center", marginBottom: "20px" }}>Login</h2>
       <form onSubmit={handleFormSubmit}>
         <div className="flex-row space-between my-2">
           <label htmlFor="email">Email address:</label>
           <input
+            style={{ width: "100%", padding: "8px", boxSizing: "border-box" }}
             placeholder="youremail@test.com"
             name="email"
             type="email"
@@ -49,7 +52,8 @@ function Login(props) {
         <div className="flex-row space-between my-2">
           <label htmlFor="pwd">Password:</label>
           <input
-            placeholder="******"
+            style={{ width: "100%", padding: "8px", boxSizing: "border-box" }}
+            placeholder="**"
             name="password"
             type="password"
             id="pwd"
@@ -58,11 +62,25 @@ function Login(props) {
         </div>
         {error ? (
           <div>
-            <p className="error-text">The provided credentials are incorrect</p>
+            <p className="error-text" style={{ color: "red" }}>
+              The provided credentials are incorrect
+            </p>
           </div>
         ) : null}
         <div className="flex-row flex-end">
-          <button type="submit">Submit</button>
+          <button
+            type="submit"
+            style={{
+              backgroundColor: "#387a4a",
+              color: "white",
+              padding: "10px 20px",
+              border: "none",
+              cursor: "pointer",
+              margin: "10px 150px",
+            }}
+          >
+            Submit
+          </button>
         </div>
       </form>
     </div>
