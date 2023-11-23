@@ -1,9 +1,9 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import Home from './pages/home.jsx';
-import Login from './pages/login.jsx';
-import Signup from './pages/Signup.jsx';
-import App from './app.jsx'
+import Home from './pages/Home';
+import Login from './pages/Login';
+import Signup from './pages/Signup';
+import App from './app'
 import './index.css'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
@@ -11,10 +11,9 @@ const router = createBrowserRouter([
     {
       path: '/',
       element: <App />,
-      errorElement: <NoMatch />,
       children: [
         {
-          index: true,
+          path: '/home',
           element: <Home />
         }, {
           path: '/login',
