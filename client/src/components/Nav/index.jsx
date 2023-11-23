@@ -1,8 +1,8 @@
 import Auth from '../../utils/auth';
 import { Link } from 'react-router-dom';
+import './nav.css';
 
 function Nav() {
-
     function handleLogout() {
         Auth.logout();
     }
@@ -69,6 +69,7 @@ function Nav() {
             );
         }
     }
+
     return (
         <header className='flex-row px-1'>
             <h1>
@@ -77,7 +78,6 @@ function Nav() {
                    Bitches Be Shopping
                 </Link>
             </h1>
-
             {showNavigation()}
         </header>
     );
