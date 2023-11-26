@@ -1,41 +1,75 @@
 import Auth from '../../utils/auth';
 import { Link } from 'react-router-dom';
+import './nav.css';
 
 function Nav() {
+    function handleLogout() {
+        Auth.logout();
+    }
 
     function showNavigation() {
         if (Auth.loggedIn()) {
             return (
-                <ul className="flex-row">
-                    <li className="mx-1">
-                        <Link to="/orderHistory">
-                            Order History
-                        </Link>
+                <div className="navbar">
+                    <ul className="flex-row">
+                        <li className="mx-1">
+                            <Link to="/">
+                                Home
+                            </Link>
                         </li>
                         <li className="mx-1">
-                            <a href='/' onClick={() => Auth.logout()}>
+                            <Link to="/about">
+                                About Us
+                            </Link>
+                        </li>
+                        <li className="mx-1">
+                            <Link to="/contact">
+                                Contact Us
+                            </Link>
+                        </li>
+                        <li className="mx-1">
+                            <Link to="/" onClick={handleLogout}>
                                 Logout
-                            </a>
+                            </Link>
                         </li>
                     </ul>
+                </div>
             );
-        }   else {
+        } else {
             return (
-                <ul className='flex-row'>
-                    <li className='mx-1'>
-                        <Link to="/signup">
-                            Signup
-                        </Link>
-                    </li>
-                    <li className='mx-1'>
-                        <Link to='/login'>
-                            Login
-                        </Link>
-                    </li>
-                </ul>
+                <div className="navbar">
+                    <ul className='flex-row'>
+                        <li className='mx-1'>
+                            <Link to="/">
+                                Home
+                            </Link>
+                        </li>
+                        <li className='mx-1'>
+                            <Link to="/about">
+                                About Us
+                            </Link>
+                        </li>
+                        <li className='mx-1'>
+                            <Link to="/contact">
+                                Contact Us
+                            </Link>
+                        </li>
+                        <li className='mx-1'>
+                            <Link to="/signup">
+                                Signup
+                            </Link>
+                        </li>
+                        <li className='mx-1'>
+                            <Link to='/login'>
+                                Login
+                            </Link>
+                        </li>
+                    </ul>
+                </div>
             );
         }
     }
+
     return (
         <header className='flex-row px-1'>
             <h1>
@@ -44,10 +78,7 @@ function Nav() {
                    Bitches Be Shopping
                 </Link>
             </h1>
-
-            <nav>
-                {showNavigation()}
-            </nav>
+            {showNavigation()}
         </header>
     );
 }
