@@ -50,8 +50,7 @@ type BidHistory {
     addUser(firstName: String!, lastName: String!, email: String!, password: String!): User
     updateUser(userId: ID!, username: String, email: String, password: String): User
     login(email: String!, password: String!): Auth
-  
-
+    placeBid(input: BidHistoryInput!): AuctionItem
   }
   `;
 module.exports = typeDefs;
