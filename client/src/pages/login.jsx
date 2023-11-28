@@ -30,9 +30,16 @@ function Login(props) {
   };
 
   return (
-    <div className="container my-1" style={{ maxWidth: "400px", margin: "auto" }}>
+    <div className="container my-1" style={{ 
+      maxWidth: "400px", 
+      margin: "30px",
+      background: 'rgba(51, 51, 51, 0.3)',
+      color: '#fff',
+      backdropFilter: 'blur(3px)',
+    }}>
+
       <Link to="/signup" style={{ textDecoration: "none", color: "#387a4a" }}>
-        ← Go to Signup
+        ← Don't have an account?
       </Link>
 
       <h2 style={{ textAlign: "center", marginBottom: "20px" }}>Login</h2>
@@ -41,7 +48,7 @@ function Login(props) {
           <label htmlFor="email">Email address:</label>
           <input
             style={{ width: "100%", padding: "8px", boxSizing: "border-box" }}
-            placeholder="youremail@test.com"
+            placeholder="email@youremail.com"
             name="email"
             type="email"
             id="email"
@@ -52,7 +59,7 @@ function Login(props) {
           <label htmlFor="pwd">Password:</label>
           <input
             style={{ width: "100%", padding: "8px", boxSizing: "border-box" }}
-            placeholder="**"
+            placeholder="*****"
             name="password"
             type="password"
             id="pwd"

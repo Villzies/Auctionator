@@ -74,8 +74,8 @@ function Nav() {
         <header className='flex-row px-1'>
             <h1>
                 <Link to="/">
-                   <span role='img' aria-label='money bag'>💰</span>
-                   Bitches Be Shopping
+                    <span role='img' aria-label='money bag'></span>
+                    Auctionator
                 </Link>
             </h1>
             {showNavigation()}
