@@ -5,11 +5,11 @@ const Home = () => {
   return (
     <div>
   <div className="auction-item-container">
-      <a href="#" class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+      <a href="#" className="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
 
-<h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"></h5>
+<h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"></h5>
 <AuctionItem />
-<form>
+{/* <form>
 <div className="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
             <div className="sm:col-span-4">
               <label htmlFor="username" className="block text-sm font-medium leading-6 text-gray-900">
@@ -39,7 +39,7 @@ const Home = () => {
         </button>
       </div>
       </form>
-    
+     */}
       </a>
       </div>
   </div>
