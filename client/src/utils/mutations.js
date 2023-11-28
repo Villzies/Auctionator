@@ -31,3 +31,20 @@ export const ADD_USER = gql`
     }
   }
 `;
+
+export const PLACE_BID_MUTATION = gql`
+  mutation Mutation($input: BidHistoryInput!) {
+    placeBid(input: $input) {
+      bidHistory {
+        bidder {
+          _id
+          firstName
+          lastName
+          email
+        }
+        amount
+        timestamp
+      }
+    }
+  }
+`;

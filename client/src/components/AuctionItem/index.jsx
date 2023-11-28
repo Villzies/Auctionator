@@ -1,11 +1,23 @@
-import React from 'react';
+import React, { useState} from 'react';
 import { useQuery } from '@apollo/client';
 import { QUERY_AUCTION_ITEMS } from '../../utils/queries';
+import { PLACE_BID_MUTATION } from '../../utils/mutations';
 
-const Home = () => {
+const AuctionItem = () => {
   const { loading, data } = useQuery(QUERY_AUCTION_ITEMS);
   console.log(data);
   const auctionItem = data?.getAllAuctionItems || [];
+  const [bidAmount, setBidAmount] = useState('');
+
+  const handleBidChange = (event) => {
+    const inputValue = event.target.value;
+    setBidAmount(inputValue);
+  };
+ const handleBidSubmit = (itemId) => {
+    console.log(`Submitting bid of ${bidAmount} for item with ID: ${itemId}`);
+    setBidAmount('');
+  };
+
   return (
     <div className="auction-items-container">
       {auctionItem.map(item => (
@@ -27,10 +39,19 @@ const Home = () => {
             ))):(<div> No bid history </div>)
           }
           </div>
+          <div>
+            <input
+              type="string"
+              value={bidAmount}
+              onChange={handleBidChange}
+              placeholder="Enter Bid Amount"
+            />
+            <button onClick={() => handleBidSubmit(item._id)}>Place Bid</button>
+          </div>
         </div>
       ))}
     </div>
   );
 };
 
-export default Home;
+export default AuctionItem;
