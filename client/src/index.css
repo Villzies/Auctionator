@@ -6,6 +6,8 @@
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
   background-color: #303030;
+  background-image: url("./assets/Polygon.svg");
+  background-size: cover;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -16,11 +18,13 @@
 
 a {
   font-weight: 500;
-  color: #51b16b;
+  color: #fafafa;
   text-decoration: inherit;
+  display: flex;
+  justify-content: center;
 }
 a:hover {
-  color: #428f56;
+  color: #c3d3c8;
   transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
 }
 
