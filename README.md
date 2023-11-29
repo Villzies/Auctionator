@@ -13,7 +13,6 @@
     <img src="https://img.shields.io/badge/Vite-yellow" />
     <img src="https://img.shields.io/badge/GraphQL-brown" />
     <img src="https://img.shields.io/badge/Apollo-brown" />
-    <img src="https://img.shields.io/badge/Stripe-pink" />
 </p>
 
 ## Description
