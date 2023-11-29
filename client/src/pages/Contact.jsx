@@ -3,9 +3,6 @@ import React from "react";
 const Contact = () => {
     return (
         <section id="contact" style={containerStyle}>
-            <h2 style={headingStyle}>
-                Contact Us
-            </h2>
             <p style={paragraphStyle}>
                 If you have any questions about the application or anything else, don't hesitate to contact us! Below, we've posted our information for you to reach out.
             </p>
@@ -57,10 +54,6 @@ const containerStyle = {
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center', // Center the content vertically
-};
-
-const headingStyle = {
-    color: '#FFF',
 };
 
 const paragraphStyle = {

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useQuery } from '@apollo/client';
 import { QUERY_AUCTION_ITEMS } from '../../utils/queries';
 import { PLACE_BID_MUTATION } from '../../utils/mutations';
+import './auction.css';
 
 const AuctionItem = () => {
   const { loading, data } = useQuery(QUERY_AUCTION_ITEMS);
@@ -52,7 +53,7 @@ const AuctionItem = () => {
                 onChange={handleBidChange}
                 placeholder="Enter Bid Amount"
               />
-              <button type="submit">Bitches be bidding!</button>
+              <button type="submit">Submit Bid</button>
             </form>
           </div>
         </div>

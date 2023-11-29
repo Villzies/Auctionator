@@ -38,7 +38,6 @@ body {
 
 .container {
   background: #181818;
-  padding: 20px;
   border-radius: 2%;
 }
 
@@ -66,15 +65,32 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+@media (min-width: 640px) {
+  .sm\:mx-auto {
+    margin-left: auto;
+    margin-right: auto;
   }
-  a:hover {
-    color: #747bff;
+
+  .sm\:w-full {
+    width: 100%;
   }
-  button {
-    background-color: #f9f9f9;
+
+  .sm\:max-w-sm {
+    max-width: 24rem;
+  }
+
+  .sm\:text-sm {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+
+  .sm\:leading-6 {
+    line-height: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .lg\:px-8 {
+    padding-left: 2rem;
   }
 }
