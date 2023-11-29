@@ -6,16 +6,31 @@ Are you looking for gifts but don't want to pay steep retail prices? Be adventur
 
 ## Table of Contents
 
-[Deployment] (#Deployment)
-[Usage] (#usage)
-[Credits] (#credits)
-[ContactUs] (#contact us)
+- [Deployment](#deployment)
+- [Usage](#usage)
+- [Contributors](#contributors)
+- [Questions](#questions)
+- [License](#license)
 
 ## Deployment
 Visit our live application [here](https://auctionator-12c2490092de.herokuapp.com/) to get bidding today!
 
 ## Usage
+Sign Up Page![image](https://github.com/Villzies/Auctionator/assets/135443479/f0f2b4c9-b4c0-42ae-8b28-4cfe70404020)
 
-## Credits
+## Contributors
 
-## Contact Us
+- [Nancy Ramirez](github.com/nramirez686)
+- [Santiago Garcia-Chavez](github.com/Disastris)
+- [Stephan Gemberling](github.com/Villzies)
+- [Taylor Campanelli](github.com/Camparooni)
+
+## Questions
+
+For questions regarding this application, please [contact me](gemberling.stephan@att.net).
+
+## License
+
+ISC License
+
+https://opensource.org/licenses/ISC
