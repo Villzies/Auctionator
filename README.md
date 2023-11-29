@@ -36,6 +36,7 @@ Checkout our repo: https://github.com/Villzies/Auctionator
 
 ## Usage
 Sign Up Page![image](https://github.com/Villzies/Auctionator/assets/135443479/f0f2b4c9-b4c0-42ae-8b28-4cfe70404020)
+Home Page![image](https://github.com/Villzies/Auctionator/assets/135443479/78b837e0-9732-4d37-9e7f-f4f913d1ba91)
 
 ## Contributors
 
